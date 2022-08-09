@@ -1,25 +1,17 @@
-### im drinkings a slurpee rn
-lmao it works, You need to use the Mounts Feature in Pterodactyl and mount the full Titanfall 2 game @/mnt/titanfall on the container
+## Docker image for the egg
+`docker.io/zymsbgt/northstar:latest` <br/>
+So this works, the old repo didn't work though (their Docker image was too outdated and this repo uses Northstar 1.9.2 as of 9 August 2022). You'll need to use the Mounts Feature in Pterodactyl and mount the full Titanfall 2 game at `/mnt/titanfall` on the container.
 Also dont forget to enable the mount in the wings conifg on the wings server that will be hosting the files.
 
-### Get the tiddy falls 2 game.
-quickest way to get the game, is to use steamcmd.sh and fool it to thinkings its a windows machine, login and then download the game to a dir. (all this is in the steamcmd docs)
+## What about the Dockerfile?
+Included in this repository.
 
-./steamcmd.sh +@sSteamCmdForcePlatformType windows +force_install_dir /TF2/ +login *USERNAME* +app_update 1237970 validate +quit
+All Joey did was make sure the user that was created was the Container user.
+Turns out no entrypoint script was needed and the Enviroment variables handle all the server config anyways.
 
-The above line, downloads titanfall2 and put it in /TF2/
-Replace *USERNAME* with your steam username, you will need to have bought the game in order to download it.
+## Egg Vars
 
-## Docker File?? Wanna build your own??
-
-This egg is based off a custom docker image that was built off of https://github.com/pg9182/northstar-dedicated
-
-All i did was make sure the user that was created was the Container user.
-Fuck the entry script etc, the Enviroment variables handle all the server config anyways.
-
-### Egg Vars
-
-Ive only included Server_Name Server Description, and Server Password as Egg Vars add the others as you wish.
+I've only included Server_Name and Server Descriptionas Egg Vars. Feel free to modify the egg to add others if you wish!
 
 
 | Environment variable      | Description |
@@ -32,3 +24,10 @@ Ive only included Server_Name Server Description, and Server Password as Egg Var
 | NS_MASTERSERVER_URL       | The base URL of the master server. |
 | NS_MASTERSERVER_REGISTER  | True/false for whether the server should register with the master server. If false, you will probably want to set NS_INSECURE to true. |
 | NS_INSECURE               | Whether to allow unauthenticated direct connections to the server. |
+
+## Want something simple to setup or a server to run this on?
+I run GeyserHost, where I set up game servers like Minecraft and Northstar for gamers to run. If you'd like to leave setting up the server to me or wanna support my work, do join the [GeyserHost discord!](https://discord.gg/gwtQqFjDYp)
+
+### Credits
+I made this repo because I wanted to be able to host Titalfall 2 servers on Pterodactyl Panel. Found a repo (https://github.com/joeyjoey1234/Pterodactyl_Egg_Titanfall_2_Northstar) but it didn't work as it was too outdated, so I thought I might as well spend some time fixing it. 
+Big thanks to Gecko#7945 and BulletMemes#0072 on the Northstar discord server for helping me with debugging!

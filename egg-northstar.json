@@ -1,22 +1,22 @@
 {
     "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
-        "version": "PTDL_v1",
+        "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2022-05-18T02:23:13-05:00",
-    "name": "TitanFall 2",
-    "author": "admin@joepena.dev",
-    "description": "--publish 8081:8081\/tcp --publish 37015:37015\/udp",
+    "exported_at": "2022-08-09T17:17:30+08:00",
+    "name": "Northstar",
+    "author": "zymsbgt@gmail.com",
+    "description": "Make sure to allocate ports 8081 and 37015!\r\nEgg created by Zym for https:\/\/geyser.host",
     "features": null,
-    "images": [
-        "ghcr.io\/joeyjoey1234\/northstarptero:latest"
-    ],
+    "docker_images": {
+        "docker.io\/zymsbgt\/northstar:latest": "docker.io\/zymsbgt\/northstar:latest"
+    },
     "file_denylist": [],
     "startup": "\/bin\/bash",
     "config": {
         "files": "{}",
-        "startup": "{\r\n    \"done\": \"* We are completely uploaded and fine\"\r\n}",
+        "startup": "{\r\n    \"done\": \"Succesfully added server to the master server.\"\r\n}",
         "logs": "{\r\n    \"custom\": true,\r\n    \"location\": \"logs\/latest.log\"\r\n}",
         "stop": "^C ^C"
     },
@@ -32,28 +32,21 @@
             "name": "Server Name",
             "description": "",
             "env_variable": "NS_SERVER_NAME",
-            "default_value": "EVLBOX BEST SERVER",
+            "default_value": "[REGION] A Northstar Pterodactyl server",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "string|max:250"
-        },
-        {
-            "name": "Server Password",
-            "description": "",
-            "env_variable": "NS_SERVER_PASSWORD",
-            "default_value": "VeryGoodPassword",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string|max:20"
+            "rules": "string|max:250",
+            "field_type": "text"
         },
         {
             "name": "Server Description",
             "description": "",
             "env_variable": "NS_SERVER_DESC",
-            "default_value": "The Best Server",
+            "default_value": "Pterodactyl egg created for GeyserHost!",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "string|max:20"
+            "rules": "string|max:250",
+            "field_type": "text"
         }
     ]
 }

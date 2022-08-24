@@ -9,6 +9,14 @@ Included in this repository.
 All Joey did was make sure the user that was created was the Container user.
 Turns out no entrypoint script was needed and the Enviroment variables handle all the server config anyways.
 
+# How do I build a new version of Northstar from the Dockerfile?
+Here's the commands I use to push a new release. You'll likely have to modify the steps where you see fit.
+```
+docker build -t northstar .
+docker tag <imageID> zymsbgt/northstar
+docker push zymsbgt/northstar:latest
+```
+
 ## Egg Vars
 
 I've only included Server_Name and Server Descriptionas Egg Vars. Feel free to modify the egg to add others if you wish!

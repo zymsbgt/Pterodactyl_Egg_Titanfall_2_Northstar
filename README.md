@@ -1,6 +1,6 @@
 ## Docker image for the egg
 `docker.io/zymsbgt/northstar:latest` <br/>
-So this works, the old repo didn't work though (their Docker image was too outdated and this repo uses Northstar 1.9.3 as of 9 August 2022). You'll need to use the Mounts Feature in Pterodactyl and mount the full Titanfall 2 game at `/mnt/titanfall` on the container.
+So this works, the old repo didn't work though (their Docker image was too outdated and this repo uses Northstar 1.9.7 as of 8 October 2022). You'll need to use the Mounts Feature in Pterodactyl and mount the full Titanfall 2 game at `/mnt/titanfall` on the container.
 Also dont forget to enable the mount in the wings conifg on the wings server that will be hosting the files.
 
 ## What about the Dockerfile?

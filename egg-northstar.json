@@ -4,9 +4,9 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2022-08-09T17:17:30+08:00",
+    "exported_at": "2022-10-29T10:02:06+08:00",
     "name": "Northstar",
-    "author": "zymsbgt@gmail.com",
+    "author": "admin@joepena.dev",
     "description": "Make sure to allocate ports 8081 and 37015!\r\nEgg created by Zym for https:\/\/geyser.host",
     "features": null,
     "docker_images": {
@@ -16,7 +16,7 @@
     "startup": "\/bin\/bash",
     "config": {
         "files": "{}",
-        "startup": "{\r\n    \"done\": \"Succesfully added server to the master server.\"\r\n}",
+        "startup": "{\r\n    \"done\": \"Successfully registered the local server to the master server\"\r\n}",
         "logs": "{\r\n    \"custom\": true,\r\n    \"location\": \"logs\/latest.log\"\r\n}",
         "stop": "^C ^C"
     },
